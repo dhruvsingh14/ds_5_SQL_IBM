@@ -8,7 +8,6 @@
 
 import ibm_db
 
-
 ########################################################
 # Task 2: Identify the database connection credentials #
 ########################################################
@@ -198,7 +197,6 @@ pconn = ibm_db_dbi.Connection(conn)
 test_score_query = """SELECT test_score as "Test Score", count(*) as "Frequency" from INTERNATIONAL_STUDENT_TEST_SCORES GROUP BY test_score;"""
 dataframe = pd.read_sql(test_score_query, pconn)
 print(dataframe)
-
 
 # dataframe = test_score_distribution.DataFrame()
 import seaborn
